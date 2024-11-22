@@ -24,24 +24,45 @@
 \definecolor{bg}{rgb}{0.95,0.95,0.92}
 \setminted{linenos=true, autogobble, bgcolor=bg, breaklines=true}
 
+
+\newcommand{\rojo}[1]{\mathbin{\color{red}#1}}
+\newcommand{\mora}[1]{\mathbin{\color{violet}#1}}
+\newcommand{\verd}[1]{\mathbin{\color{Green}#1}}
+\newcommand{\azul}[1]{\mathbin{\color{cyan}#1}}
+\newcommand{\nara}[1]{\mathbin{\color{BurntOrange}#1}}
+
 \begin{document}
 
 % Interlineate, it can be changed.
 % \setlength{\baselineskip}{.70cm}
 
-\import{Secciones/}{1_Portada.tex}
+\import{Secciones/}{0_Portada.tex}
 {
   \hypersetup{hidelinks}
   \tableofcontents
 }
 \clearpage
 
-\import{Secciones/}{2_Problema-1.tex}
-\FloatBarrier 
+\import{Secciones/}{1_Problema-A.tex}
+\clearpage
+\import{Secciones/}{2_Problema-B.tex}
+\clearpage
+\import{Secciones/}{3_Problema-C.tex}
+\clearpage
+\import{Secciones/}{4_Problema-D.tex}
+\clearpage
+\import{Secciones/}{5_Problema-E.tex}
+\clearpage
+\import{Secciones/}{6_Problema-F.tex}
+\clearpage
+\import{Secciones/}{7_Problema-G.tex}
+\clearpage
+\import{Secciones/}{8_Problema-H.tex}
+\clearpage
 
 \clearpage
 \appendix
-\import{Secciones}{codigos.tex}
+\import{Secciones}{A_Codigos.tex}
 
 \clearpage
 \pagestyle{\auxsettings}

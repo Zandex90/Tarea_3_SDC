@@ -1,0 +1,60 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{apunte-sld}{booklet}{}
+      \name{author}{2}{}{%
+        {{hash=bf5fb08813cc6988c1a417f66bc4e564}{%
+           family={Espinoza},
+           familyi={E\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a1f4d37550a2c6df44386d9c87be88b1}{%
+           family={Sbárbaro},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Departamento de Ingeniería Eléctrica}%
+      }
+      \strng{namehash}{549fbbcc94a9bd45ab1b2fc09bc9ad7c}
+      \strng{fullhash}{549fbbcc94a9bd45ab1b2fc09bc9ad7c}
+      \strng{bibnamehash}{549fbbcc94a9bd45ab1b2fc09bc9ad7c}
+      \strng{authorbibnamehash}{549fbbcc94a9bd45ab1b2fc09bc9ad7c}
+      \strng{authornamehash}{549fbbcc94a9bd45ab1b2fc09bc9ad7c}
+      \strng{authorfullhash}{549fbbcc94a9bd45ab1b2fc09bc9ad7c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Apuntes Sistemas Lineales Dinámicos}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb http://www.udec.cl/jose.espinoza
+      \endverb
+      \verb{url}
+      \verb http://www.udec.cl/jose.espinoza
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
