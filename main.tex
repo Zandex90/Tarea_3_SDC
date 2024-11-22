@@ -1,0 +1,50 @@
+% \documentclass[a4paper,12pt,oneside]{all-in-one} %% ONESIDE
+\documentclass[a4paper,12pt,twoside]{all-in-one} %% TWOSIDE
+
+\doctitle{Plantilla Latex}
+\docsubtitle{Tareas UdeC}
+
+\input{preamble}
+
+\usepackage{ebgaramond}
+\usepackage{subfiles}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{lipsum}
+
+\usepackage{minted}         % Bloques de código con colores
+
+\addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\addto\captionsspanish{\renewcommand{\listingscaption}{Código}}
+\addto\captionsspanish{\providecommand*{\listingautorefname}{Cod.}}
+
+\usemintedstyle{catppuccin-latte}
+\definecolor{bg}{rgb}{0.95,0.95,0.92}
+\setminted{linenos=true, autogobble, bgcolor=bg, breaklines=true}
+
+\begin{document}
+
+% Interlineate, it can be changed.
+% \setlength{\baselineskip}{.70cm}
+
+\import{Secciones/}{1_Portada.tex}
+{
+  \hypersetup{hidelinks}
+  \tableofcontents
+}
+\clearpage
+
+\import{Secciones/}{2_Problema-1.tex}
+\FloatBarrier 
+
+\clearpage
+\appendix
+\import{Secciones}{codigos.tex}
+
+\clearpage
+\pagestyle{\auxsettings}
+\printbibliography[heading=bibintoc]
+
+\end{document}

@@ -1,0 +1,42 @@
+\title{{\Large \\ Plantilla \\[0.1 cm]}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{titlepage}
+    \newcommand{\drop}{0.1\textheight}
+    \newcommand{\halfdrop}{0.05\textheight}
+    \vspace*{\drop}
+    \begin{center}
+    {\LARGE\textsc{Universidad de Concepción}}\\[\drop]
+    % University logo
+    \begin{minipage}{0.47\linewidth}
+        \centering
+        {\includegraphics[height=4cm]{extras/logo_udec.png}}
+    \end{minipage}
+    \begin{minipage}{0.47\linewidth}  % yet another guess
+        \centering
+        {\includegraphics[height=6cm]{extras/logo_die.png}}
+    \end{minipage}\\[\halfdrop]
+    \rule{\textwidth}{1pt}\par
+    \vspace{0.5\baselineskip}
+    {\huge\bfseries Asignatura: Tarea x\\
+    \large --- Profesor Nombre Profesor ---}\\[0.5\baselineskip]
+    \rule{\textwidth}{1pt}\par
+    \vfill
+    {\Large\textsc{Nombre Apellido 1 \\ Nombre Apellido 2 \\[1ex] Nombre Apellido 3}}
+    \vfill
+    Concepción, Chile
+    \vfill
+    {\large 2024}
+    \end{center}
+\end{titlepage}
+
+\fancyhead[L]{\footnotesize Ingeniería Civil Electronica UdeC} %encabezado izquierda
+\fancyhead[R]{\footnotesize Plantilla}   % derecha
+%\fancyfoot[R]{\footnotesize Electromagnetismo y Circuitos}  % Pie derecha
+\fancyfoot[C]{\thepage}  % centro
+%\fancyfoot[L]{\footnotesize Proyecto FAD 11/2018 }
+\renewcommand{\footrulewidth}{0.4pt}

@@ -1,0 +1,17 @@
+name: Generar documento LaTeX
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configurar repositorio Git
+        uses: actions/checkout@v4
+      - name: Instalar Nix
+        uses: cachix/install-nix-action@v27
+      - name: Compilar documento
+        run: nix build
+      - name: Publicar documento PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: documento.pdf
+          path: result/doc_compressed.pdf
