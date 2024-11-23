@@ -1,0 +1,89 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=9.535cm,
+height=2.765cm,
+at={(0cm,0cm)},
+scale only axis,
+unbounded coords=jump,
+separate axis lines,
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+every x tick/.append style={white!15!black},
+xmode=log,
+xmin=0.1,
+xmax=100,
+xminorticks=true,
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+every y tick/.append style={white!15!black},
+ymin=-190,
+ymax=-0,
+ytick={-225, -180, -135,  -90,  -45,    0},
+ylabel style={font=\color{white!15!black}},
+ylabel={Fase $[\unit{deg}]$},
+xlabel={Frecuencia $[\unit{rad/s}]$},
+axis background/.style={fill=white}
+]
+\addplot [color=gray, line width=1.5pt, forget plot]
+  table[]{Diagramas/data/bode_b-1.tsv};
+\addplot [color=gray, line width=1.5pt, forget plot]
+  table[]{Diagramas/data/bode_b-2.tsv};
+\addplot [color=gray, dashdotted, forget plot]
+  table[]{Diagramas/data/bode_b-3.tsv};
+\addplot [color=gray, dashdotted, forget plot]
+  table[]{Diagramas/data/bode_b-4.tsv};
+\addplot [color=mycolor2, forget plot]
+  table[]{Diagramas/data/bode_b-5.tsv};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_b-7.tsv};
+\addplot [color=gray, dotted, forget plot]
+  table[]{Diagramas/data/bode_b-8.tsv};
+\addplot [color=gray, dotted, forget plot]
+  table[]{Diagramas/data/bode_b-9.tsv};
+\end{axis}
+
+\begin{axis}[%
+width=9.535cm,
+height=2.765cm,
+at={(0cm,3.235cm)},
+scale only axis,
+unbounded coords=jump,
+separate axis lines,
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+every x tick/.append style={white!15!black},
+xmode=log,
+xmin=0.1,
+xmax=100,
+xtick={0.1,1,10,100},
+xticklabels={\empty},
+xminorticks=true,
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+every y tick/.append style={white!15!black},
+ymin=-50,
+ymax=10,
+ylabel style={font=\color{white!15!black}},
+ylabel={Magnitud $[\unit{dB}]$},
+axis background/.style={fill=white},
+]
+\addplot [color=gray, line width=1.5pt, forget plot]
+  table[]{Diagramas/data/bode_b-10.tsv};
+\addplot [color=gray, line width=1.5pt, forget plot]
+  table[]{Diagramas/data/bode_b-11.tsv};
+\addplot [color=gray, dashdotted, forget plot]
+  table[]{Diagramas/data/bode_b-12.tsv};
+\addplot [color=gray, dashdotted, forget plot]
+  table[]{Diagramas/data/bode_b-13.tsv};
+\addplot [color=mycolor2, forget plot]
+  table[]{Diagramas/data/bode_b-14.tsv};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt,
+  draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_b-16.tsv};
+\end{axis}
+\end{tikzpicture}%

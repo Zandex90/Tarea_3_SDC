@@ -11,6 +11,6 @@ Ls = cnt * k_a * sys * k_st; % Lazo Directo
 %% Calulo MG y MF
 [MG,MF] = margin(Ls);
 disp('Margen de Ganancia (MG):');
-disp(MG); % En veces, si lo queremos en dB: 20*log10(GM)
+disp(MG); % En absoluto
 disp('Margen de Fase (MF):');
 disp(MF); % En grados
