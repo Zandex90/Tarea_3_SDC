@@ -26,20 +26,21 @@ xmax=0.2,
 every outer y axis line/.append style={mycolor4},
 every y tick label/.append style={font=\color{mycolor4}},
 every y tick/.append style={mycolor4},
-ymin=-15,
-ymax=15,
+ymin=-2,
+ymax=2,
 ylabel style={font=\color{mycolor4}},
 ylabel={To: Out(1)},
 axis background/.style={fill=white},
 title style={font=\color{mycolor4}},
-title={From: In(1)}
+title={From: In(1)},
+restrict y to domain=-20:20
 ]
 \addplot[only marks, mark=+, mark options={}, mark size=2.5000pt, draw=mycolor2, forget plot] table[]{Diagramas/data/nyquist_f1-1.tsv};
 \addplot [color=mycolor3, dotted, forget plot]
   table[]{Diagramas/data/nyquist_f1-2.tsv};
 \addplot [color=mycolor3, dotted, forget plot]
   table[]{Diagramas/data/nyquist_f1-3.tsv};
-\draw[dashdotted, draw=mycolor3] (axis cs:-1,-1) rectangle (axis cs:1,1);
+\draw[dashdotted, draw=mycolor3] (axis cs:0,0) circle [radius=1];
 \addplot [color=mycolor3, dashdotted, forget plot]
   table[]{Diagramas/data/nyquist_f1-4.tsv};
 \addplot [color=mycolor3, dashdotted, forget plot]
@@ -54,21 +55,5 @@ table[] {Diagramas/data/nyquist_f1-7.tsv}--cycle;
   table[]{Diagramas/data/nyquist_f1-8.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor1, fill=mycolor1, forget plot] table[]{Diagramas/data/nyquist_f1-9.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor1, fill=mycolor1, forget plot] table[]{Diagramas/data/nyquist_f1-10.tsv};
-\end{axis}
-
-\begin{axis}[%
-width=12.224cm,
-height=7.334cm,
-at={(-1.277cm,-0.784cm)},
-scale only axis,
-xmin=0,
-xmax=1,
-ymin=0,
-ymax=1,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left
-]
 \end{axis}
 \end{tikzpicture}%

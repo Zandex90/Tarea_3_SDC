@@ -12,7 +12,7 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=9.535cm,
+width=9.632cm,
 height=2.765cm,
 at={(0cm,0cm)},
 scale only axis,
@@ -23,7 +23,7 @@ every x tick label/.append style={font=\color{mycolor3}},
 every x tick/.append style={mycolor3},
 xmode=log,
 xmin=0.1,
-xmax=100,
+xmax=15.707963267949,
 xminorticks=true,
 every outer y axis line/.append style={mycolor3},
 every y tick label/.append style={font=\color{mycolor3}},
@@ -50,7 +50,7 @@ axis background/.style={fill=white}
 \end{axis}
 
 \begin{axis}[%
-width=9.535cm,
+width=9.632cm,
 height=2.765cm,
 at={(0cm,3.235cm)},
 scale only axis,
@@ -61,8 +61,8 @@ every x tick label/.append style={font=\color{mycolor3}},
 every x tick/.append style={mycolor3},
 xmode=log,
 xmin=0.1,
-xmax=100,
-xtick={0.1,1,10,100},
+xmax=15.707963267949,
+xtick={0.1,1,10},
 xticklabels={\empty},
 xminorticks=true,
 every outer y axis line/.append style={mycolor3},
@@ -88,21 +88,5 @@ title={From: In(1)}
   table[]{Diagramas/data/bode_h1-12.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=white, forget plot] table[]{Diagramas/data/bode_h1-13.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_h1-14.tsv};
-\end{axis}
-
-\begin{axis}[%
-width=10.298cm,
-height=6.179cm,
-at={(-0.66cm,-0.135cm)},
-scale only axis,
-xmin=0,
-xmax=1,
-ymin=0,
-ymax=1,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left
-]
 \end{axis}
 \end{tikzpicture}%

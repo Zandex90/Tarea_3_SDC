@@ -28,9 +28,9 @@ xminorticks=true,
 every outer y axis line/.append style={mycolor3},
 every y tick label/.append style={font=\color{mycolor3}},
 every y tick/.append style={mycolor3},
-ymin=-7200,
+ymin=-7650,
 ymax=-0,
-ytick={-7200, -5760, -4320, -2880, -1440,     0},
+ytick={-8640, -7200, -5760, -4320, -2880, -1440,     0},
 ylabel style={font=\color{mycolor4}},
 ylabel={Phase (deg)},
 axis background/.style={fill=white}
@@ -120,21 +120,5 @@ title={From: In(1)}
   table[]{Diagramas/data/bode_f3-28.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=white, forget plot] table[]{Diagramas/data/bode_f3-29.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_f3-30.tsv};
-\end{axis}
-
-\begin{axis}[%
-width=10.298cm,
-height=6.179cm,
-at={(-0.729cm,-0.135cm)},
-scale only axis,
-xmin=0,
-xmax=1,
-ymin=0,
-ymax=1,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left
-]
 \end{axis}
 \end{tikzpicture}%

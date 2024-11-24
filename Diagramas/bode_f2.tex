@@ -68,7 +68,7 @@ xminorticks=true,
 every outer y axis line/.append style={mycolor3},
 every y tick label/.append style={font=\color{mycolor3}},
 every y tick/.append style={mycolor3},
-ymin=-80,
+ymin=-100,
 ymax=40,
 ylabel style={font=\color{mycolor4}},
 ylabel={Magnitude (dB)},
@@ -88,21 +88,5 @@ title={From: In(1)}
   table[]{Diagramas/data/bode_f2-12.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=white, forget plot] table[]{Diagramas/data/bode_f2-13.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_f2-14.tsv};
-\end{axis}
-
-\begin{axis}[%
-width=10.298cm,
-height=6.179cm,
-at={(-0.66cm,-0.135cm)},
-scale only axis,
-xmin=0,
-xmax=1,
-ymin=0,
-ymax=1,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left
-]
 \end{axis}
 \end{tikzpicture}%

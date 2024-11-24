@@ -23,14 +23,14 @@ every x tick label/.append style={font=\color{mycolor3}},
 every x tick/.append style={mycolor3},
 xmode=log,
 xmin=0.1,
-xmax=1000,
+xmax=100,
 xminorticks=true,
 every outer y axis line/.append style={mycolor3},
 every y tick label/.append style={font=\color{mycolor3}},
 every y tick/.append style={mycolor3},
-ymin=-1035,
+ymin=-315,
 ymax=-0,
-ytick={-1080,  -990,  -900,  -810,  -720,  -630,  -540,  -450,  -360,  -270,  -180,   -90,     0},
+ytick={-315, -270, -225, -180, -135,  -90,  -45,    0},
 ylabel style={font=\color{mycolor4}},
 ylabel={Phase (deg)},
 axis background/.style={fill=white}
@@ -65,14 +65,14 @@ every x tick label/.append style={font=\color{mycolor3}},
 every x tick/.append style={mycolor3},
 xmode=log,
 xmin=0.1,
-xmax=1000,
-xtick={0.1,1,10,100,1000},
+xmax=100,
+xtick={0.1,1,10,100},
 xticklabels={\empty},
 xminorticks=true,
 every outer y axis line/.append style={mycolor3},
 every y tick label/.append style={font=\color{mycolor3}},
 every y tick/.append style={mycolor3},
-ymin=-90,
+ymin=-60,
 ymax=10,
 ylabel style={font=\color{mycolor4}},
 ylabel={Magnitude (dB)},
@@ -92,21 +92,5 @@ title={From: In(1)}
   table[]{Diagramas/data/bode_e-14.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=white, forget plot] table[]{Diagramas/data/bode_e-15.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_e-16.tsv};
-\end{axis}
-
-\begin{axis}[%
-width=10.298cm,
-height=6.179cm,
-at={(-0.66cm,-0.135cm)},
-scale only axis,
-xmin=0,
-xmax=1,
-ymin=0,
-ymax=1,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left
-]
 \end{axis}
 \end{tikzpicture}%
