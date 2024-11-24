@@ -10,10 +10,13 @@
 \usepackage{subfiles}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{physics}
-
 
 \usepackage{minted}         % Bloques de código con colores
+
+\sisetup{
+  group-digits = integer,
+  group-separator = \,
+}
 
 \addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}
 \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}

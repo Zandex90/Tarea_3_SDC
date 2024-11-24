@@ -2,42 +2,25 @@
 
 \subsection{Desarrollo}
 
-En este apartado nos piden calcular, el margen de ganancia (M.G.) y margen de fase (M.F.) , que lo realizaríamos con el de el lazo directo (L.D), pero por la tarea 1\cite{tarea-1-sdc} sabemos que el L.D es  \( \mora{k_c} \nara{ k_a} \frac{\rojo{\psi}(s)}{\verd{v_i}(s)}\nara{k_st} \) que en desarrollando es:
-
-
+En este apartado nos piden calcular, el margen de ganancia (M.G.) y margen de fase
+(M.F.). Para esto, vamos a utilzar la función de transferencia del lazo directo del
+sistema. De la tarea anterior \cite{tarea-2-sdc} sabemos que esta es:
 \begin{equation}
   LD(s) = \mora{k_c} \cdot \nara{k_a} \cdot \frac{\nara{b_{0\omega}} \left(\nara{b_{1\psi}}s + \nara{b_{0\psi}}\right)}
   {\left(\nara{a_{1\omega}}s + \nara{a_{0\omega}}\right)\left(\nara{a_{2\psi}}s^2 + \nara{a_{1\psi}}s + \nara{a_{0\psi}}\right)} \cdot \nara{k_{st}}
 \end{equation}
 
-%%%%%%  ESTO NO SE SI DEJARLO %%%%
-Donde si reemplazamos numéricamente lo anterior tenemos: 
+Luego, para determinar los valores pedidos, vamos a utilizar las herramientas
+de estudio de estabilidad de sistemas disponibles en \textit{MATLAB}. En
+específico, vamos a utilizar el comando \texttt{margin}. Este comando nos
+retornará los valores de margen de fase y margen de ganancia en grados y en
+ganancia absoluta respectivamente. Entonces, se tiene que estos son:
+
 \begin{equation}
-  LD(s) = 10m \cdot 100 \cdot \frac{0.5294 \, s + 2.362}{s^3 + 2.835 \, s^2 + 80.87 \, s + 119.5} \cdot \frac{180^{\circ}}{\pi}
+  \boxed{\textbf{M.G.} = 2.2247 = 6.945\ \unit{dB}} \qquad \boxed{\textbf{M.F.} = \ang{9.9833}}
 \end{equation}
-%%%%
 
-Ahora bien daremos uso a la herramienta de \textit{MATLAB}, utilizando el comando \verb|margin|, ya que, este comando nos devolvería el M.G. y M.F. directamente. Solo que hay que tener presente que la M.F. nos la devuelve en "Grados", y el M.G. lo devuelve en la cantidad de veces que puedo multiplicar la ganancia antes que se haga inestable, ahora bien si quisiéramos en M.G. en $dB$ solo tendríamos que hacer la relación de \(dB = 20log(M.G.)\) siendo M.G. el valor en la cantidad de veces, ahora bien para el problema \hyperref[pregunta-a]{\texttt{a)}}  tenemos que:
-
-\vspace*{0.25cm}
-
-\fbox{
-  \begin{minipage}{0.9\linewidth}
-    \begin{itemize}
-      \item \textbf{M.G.=} $2.2247$  (que es igual a $6.945 \unit{dB}$)
-      \item \textbf{M.F.=} $ 9.9833^{\circ}$
-    \end{itemize}
-  \end{minipage}
-  }
-
-\vspace*{0.5cm}
 El código utilizado para responder esta pregunta en el \autoref{lst:Cod_problema_A}.
-
-
-
-
-
-
 
 \subsection{Comentarios}
 \textbf{NO OLVIDAR!!!}
