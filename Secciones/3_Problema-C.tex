@@ -1,7 +1,32 @@
 \section{Pregunta \texttt{c)}}\label{pregunta-c}
 
-
 \subsection{Desarrollo}
+
+Luego, se desea determinar a partir de los resultados obtenidos anteriormente,
+los valroes de ganancia crítica $\mora{k_{cr}}$ y de retardo crítico $\nara{t_{cr}}$.
+Para la ganancia crítica, puesto que el margen de ganancia obtenido representa
+la ganancia máxima que se le puede aplicar al sistema con controlador $\mora{k_{c}} = 10\unit{m}$,
+entonces, la ganancia máxima del sistema general, la ganancia crítica, sería:
+\begin{equation}
+  \mora{k_{cr}} = \mora{k_{c}} \cdot \te{M.G.}
+\end{equation}
+
+En cuanto al retardo crítico, este corresponde al máximo retardo que se le
+puede aplicar al sistema antes de que se vuelva marginalmente estable. Además,
+el margen de fase representa cuánto se puede rotar el Nyquist de un sistema
+hasta que sea marginalmente estable. Entonces, como rotar el Nyquist se consigue
+aplicando un retardo, entonces se ve de esto que el retardo crítico es:
+\begin{equation}
+  \mora{t_{cr}} = \frac{\te{M.F.}\ \te{(rad)}}{\omega_{g}}
+\end{equation}
+
+Con $\omega_{g}$ la frecuencia de cruce de ganancia, la cual para el sistema
+estudiado es $\omega_{g} = 10.4\ \unit{rad/s}$.
+
+Entonces, la ganancia crítica y el retardo crítico del sistema son,
+\begin{equation}
+  \boxed{\mora{k_{cr}} = 22.247\unit{m}} \qquad \boxed{\mora{t_{cr}} = 16.75\ \unit{ms}}
+\end{equation}
 
 
 \FloatBarrier
