@@ -1,0 +1,108 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.49020,0.49020,0.49020}%
+\definecolor{mycolor2}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor3}{rgb}{0.38039,0.38039,0.38039}%
+\definecolor{mycolor4}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=9.535cm,
+height=2.765cm,
+at={(0cm,0cm)},
+scale only axis,
+unbounded coords=jump,
+separate axis lines,
+every outer x axis line/.append style={mycolor3},
+every x tick label/.append style={font=\color{mycolor3}},
+every x tick/.append style={mycolor3},
+xmode=log,
+xmin=0.1,
+xmax=100,
+xminorticks=true,
+every outer y axis line/.append style={mycolor3},
+every y tick label/.append style={font=\color{mycolor3}},
+every y tick/.append style={mycolor3},
+ymin=-540,
+ymax=-90,
+ytick={-540, -450, -360, -270, -180,  -90},
+ylabel style={font=\color{mycolor4}},
+ylabel={Phase (deg)},
+axis background/.style={fill=white}
+]
+\addplot [color=mycolor1, line width=1.5pt, forget plot]
+  table[]{Diagramas/data/bode_h1-1.tsv};
+\addplot [color=mycolor1, line width=1.5pt, forget plot]
+  table[]{Diagramas/data/bode_h1-2.tsv};
+\addplot [color=mycolor1, dashdotted, forget plot]
+  table[]{Diagramas/data/bode_h1-3.tsv};
+\addplot [color=mycolor1, dashdotted, forget plot]
+  table[]{Diagramas/data/bode_h1-4.tsv};
+\addplot [color=mycolor2, forget plot]
+  table[]{Diagramas/data/bode_h1-5.tsv};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=white, forget plot] table[]{Diagramas/data/bode_h1-6.tsv};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_h1-7.tsv};
+\end{axis}
+
+\begin{axis}[%
+width=9.535cm,
+height=2.765cm,
+at={(0cm,3.235cm)},
+scale only axis,
+unbounded coords=jump,
+separate axis lines,
+every outer x axis line/.append style={mycolor3},
+every x tick label/.append style={font=\color{mycolor3}},
+every x tick/.append style={mycolor3},
+xmode=log,
+xmin=0.1,
+xmax=100,
+xtick={0.1,1,10,100},
+xticklabels={\empty},
+xminorticks=true,
+every outer y axis line/.append style={mycolor3},
+every y tick label/.append style={font=\color{mycolor3}},
+every y tick/.append style={mycolor3},
+ymin=-60,
+ymax=30,
+ylabel style={font=\color{mycolor4}},
+ylabel={Magnitude (dB)},
+axis background/.style={fill=white},
+title style={font=\color{mycolor3}},
+title={From: In(1)}
+]
+\addplot [color=mycolor1, line width=1.5pt, forget plot]
+  table[]{Diagramas/data/bode_h1-8.tsv};
+\addplot [color=mycolor1, line width=1.5pt, forget plot]
+  table[]{Diagramas/data/bode_h1-9.tsv};
+\addplot [color=mycolor1, dashdotted, forget plot]
+  table[]{Diagramas/data/bode_h1-10.tsv};
+\addplot [color=mycolor1, dashdotted, forget plot]
+  table[]{Diagramas/data/bode_h1-11.tsv};
+\addplot [color=mycolor2, forget plot]
+  table[]{Diagramas/data/bode_h1-12.tsv};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=white, forget plot] table[]{Diagramas/data/bode_h1-13.tsv};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_h1-14.tsv};
+\end{axis}
+
+\begin{axis}[%
+width=10.298cm,
+height=6.179cm,
+at={(-0.66cm,-0.135cm)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%
