@@ -7,9 +7,10 @@ T = 200e-3;
 %% Sistema
 z = tf('z', T);
 cnt = k_c / (z-1); % Controlador proporcional
+ret = 1/z;
 sys_c = ss(A, B, C, 0);
 sys = c2d(sys_c, T);
-Ls = cnt * k_a * sys * k_st; % Lazo Directo
+Ls = cnt * ret * k_a * sys * k_st; % Lazo Directo
 
 %% Margen de fase y ganancia
 [mg, mf, wg, wp] = margin(Ls);
@@ -30,7 +31,7 @@ bp = bodeplot(Ls, {0, pi/T});
 bp.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Ganancia y retardo critico
-k_cr = mg * k_c; N_cr = round(deg2rad(mf) / (wp*T));
+k_cr = mg * k_c; N_cr = round(deg2rad(wrapTo360(mf)) / (wp*T));
 disp('Ganancia critica: ')
 disp(k_cr)
 disp('Retardo critico: ')
@@ -40,7 +41,7 @@ disp(N_cr)
 cnt1 = cnt * mg;
 sys_c = ss(A, B, C, 0);
 sys = c2d(sys_c, T);
-Ls1 = cnt1 * k_a * sys * k_st; % Lazo Directo
+Ls1 = cnt1 * ret * k_a * sys * k_st; % Lazo Directo
 
 [~, mf1] = margin(Ls1);
 disp('Margen de fase ganancia critica: ')
@@ -58,7 +59,7 @@ bp1.Characteristics.MinimumStabilityMargins.Visible = "on";
 %% Nyquist y bode retardo critico
 sys2 = sys;
 sys2.InputDelay = N_cr;
-Ls2 = cnt * k_a * sys2 * k_st; % Lazo Directo
+Ls2 = cnt * ret * k_a * sys2 * k_st; % Lazo Directo
 
 [mg2, ~] = margin(Ls2);
 disp('Margen de ganancia retardo critico: ')

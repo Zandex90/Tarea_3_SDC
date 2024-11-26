@@ -27,7 +27,7 @@ ymin=-315,
 ymax=-0,
 ytick={-270, -180, -90, 0},
 ylabel style={font=\color{white!15!black}},
-ylabel={Phase (deg)},
+ylabel={Fase $[\unit{deg}]$},
 axis background/.style={fill=white}
 ]
 \addplot [color=gray, line width=1.5pt, forget plot]
@@ -70,10 +70,9 @@ every y tick/.append style={white!15!black},
 ymin=-60,
 ymax=10,
 ylabel style={font=\color{white!15!black}},
-ylabel={Magnitude (dB)},
+ylabel={Magnitud $[\unit{dB}]$},
 axis background/.style={fill=white},
 title style={font=\color{white!15!black}},
-title={From: In(1)}
 ]
 \addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_e-10.tsv};

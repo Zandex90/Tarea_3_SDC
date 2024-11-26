@@ -23,11 +23,11 @@ xminorticks=true,
 every outer y axis line/.append style={white!15!black},
 every y tick label/.append style={font=\color{white!15!black}},
 every y tick/.append style={white!15!black},
-ymin=-360,
-ymax=-0,
-ytick={-360, -270, -180,  -90,    0},
+ymin=-1080,
+ymax=5,
+ytick={-1080, -900, -720, -540, -360, -180,  0},
 ylabel style={font=\color{white!15!black}},
-ylabel={Phase (deg)},
+ylabel={Fase $[\unit{deg}]$},
 axis background/.style={fill=white}
 ]
 \addplot [color=gray, line width=1.5pt, forget plot]
@@ -98,10 +98,9 @@ every y tick/.append style={white!15!black},
 ymin=-50,
 ymax=-0,
 ylabel style={font=\color{white!15!black}},
-ylabel={Magnitude (dB)},
+ylabel={Magnitud $[\unit{dB}]$},
 axis background/.style={fill=white},
 title style={font=\color{white!15!black}},
-title={From: In(1)}
 ]
 \addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_g3-24.tsv};
