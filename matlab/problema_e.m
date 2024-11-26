@@ -16,7 +16,7 @@ np.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Diagrama de Bode con MG y MF
 f2 = figure(2);
-bp = bodeplot(Ls);
+bp = bodeplot(Ls, {1e-1, 1e2});
 bp.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Margen de ganancia

@@ -24,7 +24,7 @@ np.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Diagrama de Bode con MG y MF
 f2 = figure(2);
-bp = bodeplot(Ls);
+bp = bodeplot(Ls, {0, pi/T});
 bp.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Ganancia y retardo critico
@@ -49,7 +49,7 @@ np1 = nyquistplot(Ls1);
 np1.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 f4 = figure(4);
-bp1 = bodeplot(Ls1);
+bp1 = bodeplot(Ls1, {0, pi/T});
 bp1.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Nyquist y bode retardo critico
@@ -66,7 +66,7 @@ np2 = nyquistplot(Ls2);
 np2.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 f6 = figure(6);
-bp2 = bodeplot(Ls2);
+bp2 = bodeplot(Ls2, {0, pi/T});
 bp2.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Exportar graficos

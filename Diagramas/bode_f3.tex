@@ -4,11 +4,6 @@
 %  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
 %where you can also make suggestions and rate matlab2tikz.
 %
-\definecolor{mycolor1}{rgb}{0.49020,0.49020,0.49020}%
-\definecolor{mycolor2}{rgb}{0.00000,0.44700,0.74100}%
-\definecolor{mycolor3}{rgb}{0.38039,0.38039,0.38039}%
-\definecolor{mycolor4}{rgb}{0.12941,0.12941,0.12941}%
-%
 \begin{tikzpicture}
 
 \begin{axis}[%
@@ -18,66 +13,66 @@ at={(0cm,0cm)},
 scale only axis,
 unbounded coords=jump,
 separate axis lines,
-every outer x axis line/.append style={mycolor3},
-every x tick label/.append style={font=\color{mycolor3}},
-every x tick/.append style={mycolor3},
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+every x tick/.append style={white!15!black},
 xmode=log,
 xmin=0.1,
 xmax=100,
 xminorticks=true,
-every outer y axis line/.append style={mycolor3},
-every y tick label/.append style={font=\color{mycolor3}},
-every y tick/.append style={mycolor3},
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+every y tick/.append style={white!15!black},
 ymin=-7650,
 ymax=-0,
 ytick={-8640, -7200, -5760, -4320, -2880, -1440,     0},
-ylabel style={font=\color{mycolor4}},
+ylabel style={font=\color{white!15!black}},
 ylabel={Phase (deg)},
 axis background/.style={fill=white}
 ]
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-1.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-2.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_f3-3.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_f3-4.tsv};
 \addplot [color=mycolor2, forget plot]
   table[]{Diagramas/data/bode_f3-5.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=white, forget plot] table[]{Diagramas/data/bode_f3-6.tsv};
 \addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor2, fill=mycolor2, forget plot] table[]{Diagramas/data/bode_f3-7.tsv};
-\addplot [color=mycolor1, dotted, forget plot]
+\addplot [color=gray, dotted, forget plot]
   table[]{Diagramas/data/bode_f3-8.tsv};
-\addplot [color=mycolor1, dotted, forget plot]
+\addplot [color=gray, dotted, forget plot]
   table[]{Diagramas/data/bode_f3-9.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-10.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-11.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-12.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-13.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_f3-14.tsv};
-\addplot [color=mycolor1, dotted, forget plot]
+\addplot [color=gray, dotted, forget plot]
   table[]{Diagramas/data/bode_f3-15.tsv};
-\addplot [color=mycolor1, dotted, forget plot]
+\addplot [color=gray, dotted, forget plot]
   table[]{Diagramas/data/bode_f3-16.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-17.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-18.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-19.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-20.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_f3-21.tsv};
-\addplot [color=mycolor1, dotted, forget plot]
+\addplot [color=gray, dotted, forget plot]
   table[]{Diagramas/data/bode_f3-22.tsv};
-\addplot [color=mycolor1, dotted, forget plot]
+\addplot [color=gray, dotted, forget plot]
   table[]{Diagramas/data/bode_f3-23.tsv};
 \end{axis}
 
@@ -88,33 +83,33 @@ at={(0cm,3.235cm)},
 scale only axis,
 unbounded coords=jump,
 separate axis lines,
-every outer x axis line/.append style={mycolor3},
-every x tick label/.append style={font=\color{mycolor3}},
-every x tick/.append style={mycolor3},
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+every x tick/.append style={white!15!black},
 xmode=log,
 xmin=0.1,
 xmax=100,
 xtick={0.1,1,10,100},
 xticklabels={\empty},
 xminorticks=true,
-every outer y axis line/.append style={mycolor3},
-every y tick label/.append style={font=\color{mycolor3}},
-every y tick/.append style={mycolor3},
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+every y tick/.append style={white!15!black},
 ymin=-100,
 ymax=40,
-ylabel style={font=\color{mycolor4}},
+ylabel style={font=\color{white!15!black}},
 ylabel={Magnitude (dB)},
 axis background/.style={fill=white},
-title style={font=\color{mycolor3}},
+title style={font=\color{white!15!black}},
 title={From: In(1)}
 ]
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-24.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_f3-25.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_f3-26.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_f3-27.tsv};
 \addplot [color=mycolor2, forget plot]
   table[]{Diagramas/data/bode_f3-28.tsv};

@@ -22,10 +22,11 @@ disp(mf)
 f1 = figure(1);
 np = nyquistplot(Ls);
 np.Characteristics.MinimumStabilityMargins.Visible = "on";
+np.YLimits = [-5, 5];
 
 %% Diagrama de Bode con MG y MF
 f2 = figure(2);
-bp = bodeplot(Ls);
+bp = bodeplot(Ls, {0, pi/T});
 bp.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Ganancia y retardo critico
@@ -48,9 +49,10 @@ disp(mf1)
 f3 = figure(3);
 np1 = nyquistplot(Ls1);
 np1.Characteristics.MinimumStabilityMargins.Visible = "on";
+np1.YLimits = [-5, 5];
 
 f4 = figure(4);
-bp1 = bodeplot(Ls1);
+bp1 = bodeplot(Ls1, {0, pi/T});
 bp1.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Nyquist y bode retardo critico
@@ -65,9 +67,10 @@ disp(mg2)
 f5 = figure(5);
 np2 = nyquistplot(Ls2);
 np2.Characteristics.MinimumStabilityMargins.Visible = "on";
+np2.YLimits = [-5, 5];
 
 f6 = figure(6);
-bp2 = bodeplot(Ls2);
+bp2 = bodeplot(Ls2, {0, pi/T});
 bp2.Characteristics.MinimumStabilityMargins.Visible = "on";
 
 %% Exportar graficos
@@ -79,6 +82,7 @@ if exportar
   matlab2tikz('figurehandle', f1, 'width', '10cm', 'height', '6cm', ...
     'interpretTickLabelsAsTex', true, 'parseStrings', false, ...
     'externalData', true, 'dataPath', './data', ...
+    'extraAxisOptions', 'restrict y to domain=-20:20', ...
     'relativeDataPath', 'Diagramas/data', 'nyquist_h1.tex');
 
   matlab2tikz('figurehandle', f2, 'width', '10cm', 'height', '6cm', ...
@@ -88,6 +92,7 @@ if exportar
   
   matlab2tikz('figurehandle', f3, 'width', '10cm', 'height', '6cm', ...
     'interpretTickLabelsAsTex', true, 'parseStrings', false, ...
+    'extraAxisOptions', 'restrict y to domain=-20:20', ...
     'externalData', true, 'dataPath', './data', ...
     'relativeDataPath', 'Diagramas/data', 'nyquist_h2.tex');
 
@@ -98,6 +103,7 @@ if exportar
 
   matlab2tikz('figurehandle', f5, 'width', '10cm', 'height', '6cm', ...
     'interpretTickLabelsAsTex', true, 'parseStrings', false, ...
+    'extraAxisOptions', 'restrict y to domain=-20:20', ...
     'externalData', true, 'dataPath', './data', ...
     'relativeDataPath', 'Diagramas/data', 'nyquist_h3.tex');
 

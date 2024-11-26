@@ -4,11 +4,6 @@
 %  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
 %where you can also make suggestions and rate matlab2tikz.
 %
-\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
-\definecolor{mycolor2}{rgb}{1.00000,0.27059,0.22745}%
-\definecolor{mycolor3}{rgb}{0.49020,0.49020,0.49020}%
-\definecolor{mycolor4}{rgb}{0.38039,0.38039,0.38039}%
-%
 \begin{tikzpicture}
 
 \begin{axis}[%
@@ -18,41 +13,43 @@ at={(0cm,0cm)},
 scale only axis,
 unbounded coords=jump,
 separate axis lines,
-every outer x axis line/.append style={mycolor4},
-every x tick label/.append style={font=\color{mycolor4}},
-every x tick/.append style={mycolor4},
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+every x tick/.append style={white!15!black},
 xmin=-4,
 xmax=3,
-every outer y axis line/.append style={mycolor4},
-every y tick label/.append style={font=\color{mycolor4}},
-every y tick/.append style={mycolor4},
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+every y tick/.append style={white!15!black},
 ymin=-8,
 ymax=8,
-ylabel style={font=\color{mycolor4}},
-ylabel={To: Out(1)},
+ylabel style={font=\color{white!15!black}},
+ylabel={Eje imaginario},
+xlabel={Eje real},
 axis background/.style={fill=white},
-title style={font=\color{mycolor4}},
-title={From: In(1)}
+legend cell align=left,
 ]
-\addplot[only marks, mark=+, mark options={}, mark size=2.5000pt, draw=mycolor2, forget plot] table[]{Diagramas/data/nyquist_d-1.tsv};
-\addplot [color=mycolor3, dotted, forget plot]
+\addplot[only marks, mark=+, mark options={}, mark size=2.5000pt, draw=red, forget plot] table[]{Diagramas/data/nyquist_d-1.tsv};
+\addplot [color=gray, dotted, forget plot]
   table[]{Diagramas/data/nyquist_d-2.tsv};
-\addplot [color=mycolor3, dotted, forget plot]
+\addplot [color=gray, dotted, forget plot]
   table[]{Diagramas/data/nyquist_d-3.tsv};
-\draw[dashdotted, draw=mycolor3] (axis cs:0,0) circle [radius=1];
-\addplot [color=mycolor3, dashdotted, forget plot]
+\draw[dashdotted, draw=gray] (axis cs:0,0) circle [radius=1];
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/nyquist_d-4.tsv};
-\addplot [color=mycolor3, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/nyquist_d-5.tsv};
 
-\addplot[area legend, draw=mycolor1, fill=mycolor1, forget plot]
+\addplot[area legend, draw=mycolor2, fill=mycolor2, forget plot]
 table[] {Diagramas/data/nyquist_d-6.tsv}--cycle;
 
-\addplot[area legend, draw=mycolor1, fill=mycolor1, forget plot]
+\addplot[area legend, draw=mycolor2, fill=mycolor2, forget plot]
 table[] {Diagramas/data/nyquist_d-7.tsv}--cycle;
-\addplot [color=mycolor1, forget plot]
+\addplot [color=mycolor2, forget plot]
   table[]{Diagramas/data/nyquist_d-8.tsv};
-\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor1, fill=mycolor1, forget plot] table[]{Diagramas/data/nyquist_d-9.tsv};
-\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor1, fill=mycolor1, forget plot] table[]{Diagramas/data/nyquist_d-10.tsv};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor1, fill=mycolor1] table[]{Diagramas/data/nyquist_d-9.tsv};
+  \addlegendentry{Margen de ganancia}
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, draw=mycolor4, fill=mycolor4] table[]{Diagramas/data/nyquist_d-10.tsv};
+  \addlegendentry{Margen de fase}
 \end{axis}
 \end{tikzpicture}%

@@ -4,11 +4,6 @@
 %  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
 %where you can also make suggestions and rate matlab2tikz.
 %
-\definecolor{mycolor1}{rgb}{0.49020,0.49020,0.49020}%
-\definecolor{mycolor2}{rgb}{0.00000,0.44700,0.74100}%
-\definecolor{mycolor3}{rgb}{0.38039,0.38039,0.38039}%
-\definecolor{mycolor4}{rgb}{0.12941,0.12941,0.12941}%
-%
 \begin{tikzpicture}
 
 \begin{axis}[%
@@ -18,30 +13,30 @@ at={(0cm,0cm)},
 scale only axis,
 unbounded coords=jump,
 separate axis lines,
-every outer x axis line/.append style={mycolor3},
-every x tick label/.append style={font=\color{mycolor3}},
-every x tick/.append style={mycolor3},
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+every x tick/.append style={white!15!black},
 xmode=log,
 xmin=0.1,
 xmax=15.707963267949,
 xminorticks=true,
-every outer y axis line/.append style={mycolor3},
-every y tick label/.append style={font=\color{mycolor3}},
-every y tick/.append style={mycolor3},
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+every y tick/.append style={white!15!black},
 ymin=-360,
 ymax=-0,
 ytick={-360, -270, -180,  -90,    0},
-ylabel style={font=\color{mycolor4}},
+ylabel style={font=\color{white!15!black}},
 ylabel={Phase (deg)},
 axis background/.style={fill=white}
 ]
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_g1-1.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_g1-2.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_g1-3.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_g1-4.tsv};
 \addplot [color=mycolor2, forget plot]
   table[]{Diagramas/data/bode_g1-5.tsv};
@@ -56,33 +51,33 @@ at={(0cm,3.235cm)},
 scale only axis,
 unbounded coords=jump,
 separate axis lines,
-every outer x axis line/.append style={mycolor3},
-every x tick label/.append style={font=\color{mycolor3}},
-every x tick/.append style={mycolor3},
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+every x tick/.append style={white!15!black},
 xmode=log,
 xmin=0.1,
 xmax=15.707963267949,
 xtick={0.1,1,10},
 xticklabels={\empty},
 xminorticks=true,
-every outer y axis line/.append style={mycolor3},
-every y tick label/.append style={font=\color{mycolor3}},
-every y tick/.append style={mycolor3},
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+every y tick/.append style={white!15!black},
 ymin=-50,
 ymax=-0,
-ylabel style={font=\color{mycolor4}},
+ylabel style={font=\color{white!15!black}},
 ylabel={Magnitude (dB)},
 axis background/.style={fill=white},
-title style={font=\color{mycolor3}},
+title style={font=\color{white!15!black}},
 title={From: In(1)}
 ]
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_g1-8.tsv};
-\addplot [color=mycolor1, line width=1.5pt, forget plot]
+\addplot [color=gray, line width=1.5pt, forget plot]
   table[]{Diagramas/data/bode_g1-9.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_g1-10.tsv};
-\addplot [color=mycolor1, dashdotted, forget plot]
+\addplot [color=gray, dashdotted, forget plot]
   table[]{Diagramas/data/bode_g1-11.tsv};
 \addplot [color=mycolor2, forget plot]
   table[]{Diagramas/data/bode_g1-12.tsv};
