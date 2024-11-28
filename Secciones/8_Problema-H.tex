@@ -3,6 +3,20 @@
 
 \subsection{Desarrollo}
 
+\subsubsection{Parte a}
+Nuevamente nos piden calcular el margen de ganancia (M.G.) y margen de fase
+(M.F.). solo que para un \(h_c(z)= \mora{k_c}/(z-1) = 4m / (z-1)\), Ahora bien, sabemos 
+que la F.de T. de lazo directo del sistema discreto es:
+\begin{equation}
+  LD(z) = \frac{\mora{k_{c}}}{(z-1)} \nara{ k_{a}} z^{-1} \cdot \frac{\rojo{\psi}(z)}{\verd{v_i}(z)} \nara{k_{st}}  
+\end{equation}
+
+Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB}. En específico, vamos a utilizar el comando \texttt{margin}. Este comando nos retornará los valores de margen de fase y margen de ganancia en grados y en ganancia absoluta respectivamente. Entonces, se tiene que estos son:
+
+\begin{equation}
+  \boxed{\textbf{M.G.} = 1.7348 = 4.7852\ \unit{dB}} \qquad \boxed{\textbf{M.F.} = \ang{22.5213}}
+\end{equation}
+
 \subsubsection{Parte b}
 
 \begin{figure}[h]

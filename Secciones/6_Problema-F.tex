@@ -3,6 +3,22 @@
 
 \subsection{Desarrollo}
 
+\subsubsection{Parte a}
+Nuevamente nos piden calcular el margen de ganancia (M.G.) y margen de fase
+(M.F.). solo que para un \(h_c(s)= \mora{k_c}/s = 10m/s\), Ahora bien, sabemos 
+por tarea anterior \cite{tarea-2-sdc} que la F.de T. de lazo directo del sistema es:
+\begin{equation}
+  LD(s) = \frac{\mora{k_c}}{s} \cdot \nara{k_a} \cdot \frac{\nara{b_{0\omega}} \left(\nara{b_{1\psi}}s + \nara{b_{0\psi}}\right)}
+  {\left(\nara{a_{1\omega}}s + \nara{a_{0\omega}}\right)\left(\nara{a_{2\psi}}s^2 + \nara{a_{1\psi}}s + \nara{a_{0\psi}}\right)} \cdot \nara{k_{st}}
+\end{equation}
+
+Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB}. En específico, vamos a utilizar el comando \texttt{margin}. Este comando nos retornará los valores de margen de fase y margen de ganancia en grados y en ganancia absoluta respectivamente. Entonces, se tiene que estos son:
+
+\begin{equation}
+  \boxed{\textbf{M.G.} = 3.0977 = 9.8208\ \unit{dB}} \qquad \boxed{\textbf{M.F.} = \ang{68.4791}}
+\end{equation}
+
+
 \subsubsection{Parte b}
 
 \begin{figure}[h]
