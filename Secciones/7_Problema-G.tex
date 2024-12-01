@@ -3,22 +3,32 @@
 
 \subsection{Desarrollo}
 
-\subsubsection{Parte a}
 Nuevamente nos piden calcular el margen de ganancia (M.G.) y margen de fase
-(M.F.). solo que para un \(h_c(z)= \mora{k_c} = 4m\), Ahora bien, sabemos 
-que la F.de T. de lazo directo del sistema discreto es:
+(M.F.). solo que para el sistema con controlador discreto \(h_c(z)= \mora{k_c} = 4m\).
+Entonces, se considera un sistema híbrido donde se le agregró un retardo de una
+muestra por cálculos. Entonces, sabemos  que la F.de T. de lazo directo del sistema
+híbrido visto de forma discreta es:
 \begin{equation}
   LD(z) = \mora{k_{c}} \nara{ k_{a}} z^{-1} \cdot \frac{\rojo{\psi}(z)}{\verd{v_i}(z)} \nara{k_{st}}  
 \end{equation}
 
-Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB}. En específico, vamos a utilizar el comando \texttt{margin}. Este comando nos retornará los valores de margen de fase y margen de ganancia en grados y en ganancia absoluta respectivamente. Entonces, se tiene que estos son:
-
+Entonces, para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB}.
+En específico, vamos a utilizar el comando \texttt{margin}, de donde se tiene:
 \begin{equation}
   \boxed{\textbf{M.G.} = 1.7174 = 4.6975\ \unit{dB}} \qquad \boxed{\textbf{M.F.} = \ang{-67.6370}}
 \end{equation}
 
+Luego, repetimos los gráficos anteriores para este sistema (\autoref{fig:nyquist-g1}
+y \autoref{fig:bode-g1}).
 
-\subsubsection{Parte b}
+También se determina la ganancia y retardos críticos:
+\begin{equation}
+  \boxed{\mora{k_{cr}} = 6.9\unit{m}} \qquad \boxed{\mora{N_{cr}} = 3\ \unit{muestras}}
+\end{equation}
+
+Donde, para el retardo crítico, se calculó que debiera ser $2.9098\ \unit{muestras}$,
+pero puesto que no se puede tener un retardo en muestras que no sea un número entero,
+entonces se redondeó al entero más cercano, llegando a $\mora{N_{cr}} = 3\ \unit{muestras}$.
 
 \begin{figure}[h]
   \centering
@@ -34,7 +44,11 @@ Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB
   \label{fig:bode-g1}
 \end{figure}
 
-\subsubsection{Parte d}
+Se grafica entonces para la ganancia crítica en \autoref{fig:nyquist-g2} y \autoref{fig:bode-g2}
+con un margen de fase:
+\begin{equation}
+  \boxed{\textbf{M.F.} = \ang{0.0236}}
+\end{equation}
 
 \begin{figure}[h]
   \centering
@@ -50,7 +64,11 @@ Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB
   \label{fig:bode-g2}
 \end{figure}
 
-\subsubsection{Parte e}
+Y luego se grafica para el retardo crítico (\autoref{fig:nyquist-g3} y
+\autoref{fig:bode-g3}), donde se tiene que el margen de ganancia es entonces:
+\begin{equation}
+  \boxed{\textbf{M.G.} = 1.0102 = 0.2024\ \unit{dB}}
+\end{equation}
 
 \begin{figure}[h]
   \centering

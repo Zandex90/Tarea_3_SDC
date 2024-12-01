@@ -1,9 +1,7 @@
 \section{Pregunta \texttt{f)}}\label{pregunta-f}
 
-
 \subsection{Desarrollo}
 
-\subsubsection{Parte a}
 Nuevamente nos piden calcular el margen de ganancia (M.G.) y margen de fase
 (M.F.). solo que para un \(h_c(s)= \mora{k_c}/s = 10m/s\), Ahora bien, sabemos 
 por tarea anterior \cite{tarea-2-sdc} que la F.de T. de lazo directo del sistema es:
@@ -12,14 +10,21 @@ por tarea anterior \cite{tarea-2-sdc} que la F.de T. de lazo directo del sistema
   {\left(\nara{a_{1\omega}}s + \nara{a_{0\omega}}\right)\left(\nara{a_{2\psi}}s^2 + \nara{a_{1\psi}}s + \nara{a_{0\psi}}\right)} \cdot \nara{k_{st}}
 \end{equation}
 
-Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB}. En específico, vamos a utilizar el comando \texttt{margin}. Este comando nos retornará los valores de margen de fase y margen de ganancia en grados y en ganancia absoluta respectivamente. Entonces, se tiene que estos son:
+Entonces, para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB}.
+En específico, vamos a utilizar el comando \texttt{margin}. Este comando nos retornará
+los valores de margen de fase y margen de ganancia en grados y en ganancia absoluta
+respectivamente. Entonces, se tiene que estos son:
 
 \begin{equation}
   \boxed{\textbf{M.G.} = 3.0977 = 9.8208\ \unit{dB}} \qquad \boxed{\textbf{M.F.} = \ang{68.4791}}
 \end{equation}
 
-
-\subsubsection{Parte b}
+Al igual que para el sistema anterior, se graficó el Nyquist (\autoref{fig:nyquist-f1})
+y el Bode (\autoref{fig:bode-f1}) de este sistema. Además, se determinó el valor de la
+ganancia crítica y del retardo crítico, obteniendo así:
+\begin{equation}
+  \boxed{\mora{k_{cr}} = 31.0\unit{m}} \qquad \boxed{\mora{t_{cr}} = 1.2143\ \unit{s}}
+\end{equation}
 
 \begin{figure}[h]
   \centering
@@ -35,7 +40,11 @@ Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB
   \label{fig:bode-f1}
 \end{figure}
 
-\subsubsection{Parte d}
+Luego, se graficó el Nyquist (\autoref{fig:nyquist-f2}) y el Bode (\autoref{fig:bode-f2})
+del sistema con la ganancia crítica añadida. Para este caso, se obtuvo margen de fase
+\begin{equation}
+  \boxed{\textbf{M.F.} = \ang{-0.0946}}
+\end{equation}
 
 \begin{figure}[h]
   \centering
@@ -51,7 +60,11 @@ Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB
   \label{fig:bode-f2}
 \end{figure}
 
-\subsubsection{Parte e}
+Y finalmente, se hizo lo mismo que antes, pero con el retardo crítico (\autoref{fig:nyquist-f3}
+y \autoref{fig:bode-f3}), donde se obtuvo un margen de ganancia
+\begin{equation}
+  \boxed{\textbf{M.G.} = 1 = 0\ \unit{dB}}
+\end{equation}
 
 \begin{figure}[h]
   \centering

@@ -9,8 +9,15 @@ sys = ss(A, B, C, 0);
 Ls = cnt * k_a * sys * k_st; % Lazo Directo
 
 %% Calulo MG y MF
-[MG,MF] = margin(Ls);
+[mg, mf, wg, wp] = margin(Ls);
 disp('Margen de Ganancia (MG):');
-disp(MG); % En absoluto
+disp(mg); % En absoluto
 disp('Margen de Fase (MF):');
-disp(MF); % En grados
+disp(mf); % En grados
+
+%% Ganancia y retardo critico
+k_cr = mg * k_c; t_cr = deg2rad(mf) / wp;
+disp('Ganancia critica: ')
+disp(k_cr)
+disp('Retardo critico: ')
+disp(t_cr)
