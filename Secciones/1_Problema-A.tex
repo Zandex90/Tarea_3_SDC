@@ -24,17 +24,10 @@ El código utilizado para responder esta pregunta puede observarse en el
 \autoref{lst:Cod_problema_A}.
 
 \subsection{Comentarios}
-\textbf{NO OLVIDAR!!!}
 
-%%% A %%%
-\begin{itemize}
-  \item Si existe el M.F. qué característica o parámetro es el responsable.
-  \item Si no existe el M.F. qué característica o parámetro es el responsable.
-  \item Si existe el M.G. qué característica o parámetro es el responsable.
-  \item Si no existe el M.G. qué característica o parámetro es el responsable.
-  \item Implicancias prácticas del valor de M.F. obtenido.
-  \item Implicancias prácticas del valor de M.G. obtenido.
-\end{itemize}
+El margen de ganancia de $6.945$ dB (equivalente a una ganancia absoluta de $2.2247$) existe porque, en la frecuencia donde la fase total del sistema es de $-180^\circ$, la magnitud de la función de transferencia es menor que uno (o $0$ dB). Esto significa que el sistema no alcanza la ganancia crítica que provocaría la inestabilidad, gracias a los parámetros y constantes presentes en la función de transferencia, como las ganancias $\mora{k_c}$, $\nara{k_a}$ y $\nara{k_{st}}$, y los coeficientes de los polinomios en $s$.
+
+Un M.F cercano a $10^\circ$ es relativamente pequeño y sugiere que el sistema está próximo al límite de estabilidad. En la práctica, esto significa que el sistema puede ser sensible a perturbaciones, variaciones en los parámetros del sistema o retardos no considerados en el modelo. Un margen de fase reducido puede conducir a respuestas transitorias oscilatorias y a una menor tolerancia a cambios no previstos, por lo que sería recomendable ajustar el controlador o los parámetros del sistema para aumentar este margen.
 
 
 
