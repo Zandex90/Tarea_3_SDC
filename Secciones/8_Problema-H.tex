@@ -3,21 +3,26 @@
 
 \subsection{Desarrollo}
 
-\subsubsection{Parte a}
 Nuevamente nos piden calcular el margen de ganancia (M.G.) y margen de fase
-(M.F.). solo que para un \(h_c(z)= \mora{k_c}/(z-1) = 4m / (z-1)\), Ahora bien, sabemos 
-que la F.de T. de lazo directo del sistema discreto es:
+(M.F.). solo que para un controlador \(h_c(z)= \mora{k_c}/(z-1) = 4m / (z-1)\).
+Entonces, sabiendo que la función de transferencia del sistema es,
 \begin{equation}
   LD(z) = \frac{\mora{k_{c}}}{(z-1)} \nara{ k_{a}} z^{-1} \cdot \frac{\rojo{\psi}(z)}{\verd{v_i}(z)} \nara{k_{st}}  
 \end{equation}
 
-Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB}. En específico, vamos a utilizar el comando \texttt{margin}. Este comando nos retornará los valores de margen de fase y margen de ganancia en grados y en ganancia absoluta respectivamente. Entonces, se tiene que estos son:
-
+Se procede a calcular el margen de fase y margen de ganancia del sistema:
 \begin{equation}
   \boxed{\textbf{M.G.} = 1.7348 = 4.7852\ \unit{dB}} \qquad \boxed{\textbf{M.F.} = \ang{22.5213}}
 \end{equation}
 
-\subsubsection{Parte b}
+Luego, se dibujan los gráficos de interés (\autoref{fig:nyquist-h1} y \autoref{fig:bode-h1}),
+y se determina el valor de la ganancia y retardo críticos:
+\begin{equation}
+  \boxed{\mora{k_{cr}} = 6.9\unit{m}} \qquad \boxed{\mora{N_{cr}} = 1\ \unit{muestra}}
+\end{equation}
+
+Al igual que para el caso discreto anterior, el retardo crítico había dado
+originalmente un valor con parte fraccionaria, por lo que se tuvo que redondear.
 
 \begin{figure}[h]
   \centering
@@ -33,7 +38,11 @@ Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB
   \label{fig:bode-h1}
 \end{figure}
 
-\subsubsection{Parte d}
+Con esto, se pudo graficar para el sistema con ganancia crítica (\autoref{fig:nyquist-h2} y
+\autoref{fig:bode-h2}). Donde se observó que se tiene un margen de fase de:
+\begin{equation}
+  \boxed{\textbf{M.F.} = \ang{-0.00024164}}
+\end{equation}
 
 \begin{figure}[h]
   \centering
@@ -49,7 +58,11 @@ Nuevamente para determinar los valores pedidos, vamos a utilizar  \textit{MATLAB
   \label{fig:bode-h2}
 \end{figure}
 
-\subsubsection{Parte e}
+También se graficó el sistema con el retardo crítico agregado (\autoref{fig:nyquist-h3} y
+\autoref{fig:bode{h3}}). De esto, se determinó el margen de ganancia siendo así:
+\begin{equation}
+  \boxed{\textbf{M.G.} = 1.2664 = 0.55\ \unit{dB}}
+\end{equation}
 
 \begin{figure}[h]
   \centering
