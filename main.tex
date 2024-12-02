@@ -11,7 +11,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 
-\usepackage{minted}         % Bloques de código con colores
+\usepackage[newfloat]{minted}         % Bloques de código con colores
 
 \sisetup{
   group-digits = integer,
@@ -20,8 +20,9 @@
 
 \addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}
 \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
-\addto\captionsspanish{\renewcommand{\listingscaption}{Código}}
-\addto\captionsspanish{\providecommand*{\listingautorefname}{Cod.}}
+\SetupFloatingEnvironment{listing}{name=Código, autorefname=Cód.}
+
+\newenvironment{longlisting}{\captionsetup{type=listing}}{}
 
 \usemintedstyle{catppuccin-latte}
 \definecolor{bg}{rgb}{0.95,0.95,0.92}
